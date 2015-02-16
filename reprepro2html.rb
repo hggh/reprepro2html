@@ -32,7 +32,7 @@ repository = {}
 repository[:distributions_available] = []
 repository[:packages] = {}
 File.readlines(options[:reprepro_conf_distributions]).each do |line|
-  next if line !~ /\ASuite: (.*)/
+  next if line !~ /\ACodename: (.*)/
   repository[:distributions_available] << $1
 end
 
